@@ -7,7 +7,7 @@ The accordion widget is a great tool for organizing content on your overview pag
 Prerequisite
 ------------
 
-The [Content Lookup](http://www.github.com/) widget installation has essential parts of setting up this widget project.  Make sure to install this widget prior to the accordion installation.
+The [Content Lookup](https://github.com/fmr-llc/jive-content-lookup) widget installation has essential parts of setting up this widget project.  Make sure to install this widget prior to the accordion installation.
 
 
 Upload Libraries
