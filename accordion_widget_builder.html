@@ -1,0 +1,105 @@
+<!--
+Jive - Accordion Widget
+
+Copyright (c) 2015 Fidelity Investments
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+FILE DESCRIPTION
+This is the builder application that presents a front end to users and allows
+them to configure an accordion widget with a setup document.  The user needs 
+to complete the configuration and generate the widget code.  This code is then 
+pasted into an HTML Widget on an Overview page to create the accordion.
+
+WIDGET DESCRIPTION
+This Jive HTML widget loads in a Jive setup document with a two column table.
+The table content is parsed into a Bootstrap accordion.  This allows users to 
+expand and contract the panels to show and hide the contained information.
+-->
+<meta name="fidosreg" content="b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a">
+
+<script src='/resources/scripts/jquery/jquery.js'></script>
+<script>
+
+var library_loader_content_id = "0";
+
+$j("head").append('<scr'+'ipt src="/api/core/v3/attachments/file/' + library_loader_content_id + '/data"></scr'+'ipt>');
+</script>
+<script>
+$j.include_library('bootstrap.css');
+$j.include_library('bootstrap-theme.css');
+$j.include_library('accordion_widget_builder.css');
+$j.include_library('bootstrap.js');
+$j.include_library('accordion_widget_builder.js');
+</script>
+
+<div id='mainContainer'>
+
+	<div id='teamTitle' class='page-header'> 
+		<h2>Accordion Widget Builder</h2> 
+	</div>
+
+	<div id='startingDiv'>
+		<div id="search_layout">
+			<p style='color:#2AABD2;'>Please paste the URL of your Accordion Document.</p>
+			<form id="customsearchform" name="customsearchform" onsubmit="return false;">
+				<input id="docURLInput" type="text"  placeholder="Enter Document URL"/>
+				<br/><br/>
+			</form>
+			<br/>
+			<div id='URLStatus' style='color:red;'></div>
+			<button id='nextButton' class='btn btn-info btn-small' onclick='nextButton()' disabled>Next</button>
+		</div>
+
+		<div id='previewDiv' >
+			<h4>Choose Accordion Color </h4> <br/>
+			<div class='panel panel-group'>
+				<div class='panel panel-default'><div class="panel-heading" onclick="setColor('panel-default')">Silver</div></div>
+				<div class='panel panel-primary'><div class="panel-heading" onclick="setColor('panel-primary')">Blue</div></div>
+				<div class='panel panel-info'><div class="panel-heading" onclick="setColor('panel-info')">Sky Blue</div></div>
+				<div class='panel panel-success'><div class="panel-heading" onclick="setColor('panel-success')">Green</div></div>
+				<div class='panel panel-warning'><div class="panel-heading" onclick="setColor('panel-warning')">Orange</div></div>
+				<div class='panel panel-danger'><div class="panel-heading" onclick="setColor('panel-danger')">Red</div></div>
+			</div>
+			<button class='btn btn-info btn-small' onclick='backButton()'>Back</button>
+		</div>
+
+		<div id='initStateDiv'>
+			<h4>Choose Accordion Initial State</h4><br/>
+			<div id="initState">
+				<input type="radio" name="radios" id="initState-AllCollapsed" value="Collapsed" checked="checked"> All panels collapsed</input>
+				<br/>
+				<br/>
+				<input type="radio" name="radios" id="initState-FirstExpanded" value="First"> First panel expanded</input>
+				<br/>
+				<br/>
+				<input type="radio" name="radios" id="initState-AllExpanded" value="Expanded"> All panels expanded</input>
+			</div>
+			<br/>
+			<button class='btn btn-info btn-small' onclick='initStateBack()'>Back</button>
+			<button class='btn btn-info btn-small' onclick='finish()'>Next</button>
+		</div>
+		
+	</div>
+
+	<div id = 'generatedCodeDiv'>
+		<h4> Copy this code: </h4>
+		<div id='generatedTextArea'>
+			<textarea id='generatedCodeBox' readonly></textarea>
+			<h4>and paste it into an HTML Widget on your Overview page" </h4>
+		</div>
+		<button class='btn btn-info btn-small' onclick='backButtonCodeDiv()'>Back</button>
+		<button class='btn btn-info btn-small' onclick='startOver()'>Start Over</button>
+	</div> 
+
+</div>
+
