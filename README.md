@@ -94,11 +94,7 @@ Creating an accordion setup document
 * The left column represents the accordion headers (titles) and the right column represents the body (content) in the expanded panel.  For clarity, name the headers (the first row) to “Header” and “Body” to make the column functions clear.  Each row you add to the table represents another accordion section.
 <b>NOTE: Quotes and code blocks are stripped down to plain text formatting. Content and headers will be left-aligned. Do not use the “Style” option from the text editor menu, as its Jive specific styling is not supported.</b>
 The content section can include pictures, videos, animated GIFs, and other content.  Just avoid using the Jive editor styles, as these are not supported by the accordion code.
-| Title | Content |
-| :-----| :-----: |
-| Introduction      | The accordion widget is a great way to deliver various kinds of content to users without overwhelming them. |
-| Part I: Creating your accordion document | Content for Part I here... |
-| Part II: Setting up your accordion widget | Content for Part II here... |
+<img src="docs/accordion-setup-document.jpg" />
 * Once your accordion setup document is completed, publish the document.  Once it is published, copy the URL to use in the builder application.
 
 Build an accordion widget
