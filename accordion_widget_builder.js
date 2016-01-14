@@ -99,14 +99,14 @@ function finish(){
 	$j('#initStateDiv').hide();
 	initState = $j('#initStateDiv input:radio:checked').val(); 
 
-	$j('#generatedCodeBox').text("<scr"+"ipt src='/resources/scripts/jquery/jquery.js'></scr"+"ipt>\n" 
+	$j('#generatedCodeBox').text("<scr"+"ipt src='/api/core/v3/attachments/file/" + jquery_content_id + "/data'></scr"+"ipt>\n" 
 								+ "<scr"+"ipt src='/api/core/v3/attachments/file/" + library_loader_content_id + "/data'></scr"+"ipt>\n"
 								+ "<scr"+"ipt>\n"
-								+ "$j.include_library('bootstrap.css');\n"
-								+ "$j.include_library('bootstrap-theme.css');\n"
-								+ "$j.include_library('accordion_widget.css');\n"
-								+ "$j.include_library('bootstrap.js');\n"
-								+ "$j.include_library('accordion_widget.js');\n"
+								+ "$j.load_library('bootstrap.css');\n"
+								+ "$j.load_library('bootstrap-theme.css');\n"
+								+ "$j.load_library('accordion_widget.css');\n"
+								+ "$j.load_library('bootstrap.js');\n"
+								+ "$j.load_library('accordion_widget.js');\n"
 								+ "var colorStyle='"+ panelColor + "';\n"
 								+ "var sourceURL='" + sourceURL + "';\n"
 								+ "var initState='" + initState + "';\n"
