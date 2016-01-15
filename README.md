@@ -5,7 +5,7 @@ The accordion widget is a great tool for organizing content on your overview pag
 
 Prerequisite
 ------------
-The [Content Lookup](https://github.com/fmr-llc/jive-content-lookup) widget installation has essential parts of setting up this widget project.  Make sure to install this widget prior to the accordion installation.
+The [Content Lookup](https://github.com/fmr-llc/jive-content-lookup) widget installation has essential parts of setting up this widget project.  Make sure to install the Content Lookup widget prior to the Accordion widget installation.
 
 Upload Libraries
 ----------------
@@ -24,22 +24,22 @@ Update Library Loader
 * Download a copy of the "Library Loader" file from your community.  Open it for editing.
 * Go back to the Content Lookup widget and search for "Accordion Widget".  You should see the four library files you uploaded to your community in the previous section.
 * Find the search result for "Accordion Widget CSS Library" and copy its Content ID.  It should be a number like 694225.
-* Update the library_loader.js file line for "accordion_widget.css" and update the content ID variable (it should be 0 before updating) to the Content ID copied in the previous step.  The result should look similar to:
+* Update the library_loader.js file line for "accordion_widget.css" and update the content ID variable (it should be 0 before updating) to the Content ID you just copied.  The result should look similar to:
 ```
 	libraries['accordion_widget.css'] = { contentID: '694225' };
 ```
 * Find the search result for "Accordion Widget JavaScript Library" and copy its Content ID.  It should be a number like 694226.
-* Update the library_loader.js file line for "accordion_widget.js" and update the content ID variable (it should be 0 before updating) to the Content ID copied in the previous step.  The result should look similar to:
+* Update the library_loader.js file line for "accordion_widget.js" and update the content ID variable (it should be 0 before updating) to the Content ID you just copied.  The result should look similar to:
 ```
 	libraries['accordion_widget.js'] = { contentID: '694226' };
 ```
 * Find the search result for "Accordion Widget Builder CSS Library" and copy its Content ID.  It should be a number like 694227.
-* Update the library_loader.js file line for "accordion_widget_builder.css" and update the content ID variable (it should be 0 before updating) to the Content ID copied in the previous step.  The result should look similar to:
+* Update the library_loader.js file line for "accordion_widget_builder.css" and update the content ID variable (it should be 0 before updating) to the Content ID you just copied.  The result should look similar to:
 ```
 	libraries['accordion_widget_builder.css'] = { contentID: '694227' };
 ```
 * Find the search result for "Accordion Widget Builder JavaScript Library" and copy its Content ID.  It should be a number like 694228.
-* Update the library_loader.js file line for "accordion_widget_builder.js" and update the content ID variable (it should be 0 before updating) to the Content ID copied in the previous step.  The result should look similar to:
+* Update the library_loader.js file line for "accordion_widget_builder.js" and update the content ID variable (it should be 0 before updating) to the Content ID you just copied.  The result should look similar to:
 ```
 	libraries['accordion_widget_builder.js'] = { contentID: '694228' };
 ```
