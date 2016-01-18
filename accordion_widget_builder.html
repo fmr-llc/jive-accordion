@@ -27,19 +27,20 @@ expand and contract the panels to show and hide the contained information.
 -->
 <meta name="fidosreg" content="b764a0a9536448345dc227af95e192521d337b5e4c3560c859b89ecd0407004a">
 
-<script src='/resources/scripts/jquery/jquery.js'></script>
+<script src='/api/core/v3/attachments/file/1477080/data'></script>
 <script>
 
-var library_loader_content_id = "0";
-
+var jquery_content_id = "1477080";
+var library_loader_content_id = "1435000";
+$j=jQuery.noConflict();
 $j("head").append('<scr'+'ipt src="/api/core/v3/attachments/file/' + library_loader_content_id + '/data"></scr'+'ipt>');
 </script>
 <script>
-$j.include_library('bootstrap.css');
-$j.include_library('bootstrap-theme.css');
-$j.include_library('accordion_widget_builder.css');
-$j.include_library('bootstrap.js');
-$j.include_library('accordion_widget_builder.js');
+$j.load_library('bootstrap.css');
+$j.load_library('bootstrap-theme.css');
+$j.load_library('accordion_widget_builder.css');
+$j.load_library('bootstrap.js');
+$j.load_library('accordion_widget_builder.js');
 </script>
 
 <div id='mainContainer'>

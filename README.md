@@ -1,7 +1,7 @@
 Jive - Accordion Widget
 =======================
-<img src="docs/accodion-widget.jpg" />
-The accordion widget is a great tool for organizing content on your overview page.  This is a [Jive](https://community.jivesoftware.com/welcome) HTML widget project that allows content to be divided into sections, and users can expand and collapse sections as desired to view information.  Users can serve themselves to the content on a page without being overwhelmed by everything being displayed at once.  The widget is maintained using a single setup document, which is simply a Jive document with a table representing how the widget will display the information.  After the full accordion widget setup is complete, changes made to the accordion document will automatically be reflected in the accordion.  The accordion utilizes [Bootstrap panels](http://getbootstrap.com/components/#panels) to create a clean user interface for the accordion.
+<p><img src="docs/accodion-widget.jpg" /></p>
+<p>The accordion widget is a great tool for organizing content on your overview page.  This is a [Jive](https://community.jivesoftware.com/welcome) HTML widget project that allows content to be divided into sections, and users can expand and collapse sections as desired to view information.  Users can serve themselves to the content on a page without being overwhelmed by everything being displayed at once.  The widget is maintained using a single setup document, which is simply a Jive document with a table representing how the widget will display the information.  After the full accordion widget setup is complete, changes made to the accordion document will automatically be reflected in the accordion.  The accordion utilizes [Bootstrap panels](http://getbootstrap.com/components/#panels) to create a clean user interface for the accordion.</p>
 
 Prerequisite
 ------------
@@ -48,7 +48,7 @@ Update Library Loader
 * Drag the updated file from your computer to the file section of the uploaded file.
 * Click Publish.
 
-You have now updated the Library Loader in your Jive community with the library files needed to run the accordion builder and widgets.  Next, we need to change the Accordion builder code to use the Library Loader in your community.
+<p>You have now updated the Library Loader in your Jive community with the library files needed to run the accordion builder and widgets.  Next, we need to change the Accordion builder code to use the Library Loader in your community.</p>
 
 Install the Accordion Widget Builder application
 ---------------------------------------------------
@@ -67,7 +67,7 @@ Install the Accordion Widget Builder application
 ```
     <script src='JQUERY'></script>
 ```
-&nbsp;&nbsp;&nbsp;&nbsp; replace the text JQUERY with that Binary URL you copied.  It should end up looking similar to:
+<p>&nbsp;&nbsp;&nbsp;&nbsp; replace the text JQUERY with that Binary URL you copied.  It should end up looking similar to:</p>
 ```
     <script src='https://myjiveinstance.mycompany.com/api/core/v3/attachments/file/694224/data'></script>
 ```
@@ -84,17 +84,17 @@ Install the Accordion Widget Builder application
 * Copy the updated code from "accordion_widget_builder.html" and paste it into the "Your HTML" entry field in the new widget.
 * Click "Save Properties".
 * Click "Publish Layout".
-<img src="docs/accodion-widget-builder.jpg" />
-Your Accordion Widget Builder is now set up.  Site admins can use the below instructions to create their own accordions...
+<p><img src="docs/accodion-widget-builder.jpg" /></p>
+<p>Your Accordion Widget Builder is now set up.  Site admins can use the below instructions to create their own accordions...</p>
 
 Creating an accordion setup document
 ------------------------------------
 * Create a document in a place that users will have at least read access.
 * Create a table with two columns.  Make sure you add exactly two columns, and have one row per tab in your accordion.
 * The left column represents the accordion headers (titles) and the right column represents the body (content) in the expanded panel.  For clarity, name the headers (the first row) to “Header” and “Body” to make the column functions clear.  Each row you add to the table represents another accordion section.
-<b>NOTE: Quotes and code blocks are stripped down to plain text formatting. Content and headers will be left-aligned. Do not use the “Style” option from the text editor menu, as its Jive specific styling is not supported.</b>
-The content section can include pictures, videos, animated GIFs, and other content.  Just avoid using the Jive editor styles, as these are not supported by the accordion code.
-<img src="docs/accordion-setup-document.jpg" />
+<p><b>NOTE: Quotes and code blocks are stripped down to plain text formatting. Content and headers will be left-aligned. Do not use the “Style” option from the text editor menu, as its Jive specific styling is not supported.</b></p>
+<p>The content section can include pictures, videos, animated GIFs, and other content.  Just avoid using the Jive editor styles, as these are not supported by the accordion code.</p>
+<p><img src="docs/accordion-setup-document.jpg" /></p>
 * Once your accordion setup document is completed, publish the document.  Once it is published, copy the URL to use in the builder application.
 
 Build an accordion widget
