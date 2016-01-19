@@ -112,7 +112,7 @@ function finish(){
 								+ "var initState='" + initState + "';\n"
 								+ "init();\n"
 								+ "</scr"+"ipt>\n"
-								+ "<div id='mainContainer'>\n"
+								+ "<div id='AccordionContainer'>\n"
 								+ "<div class='panel-group' id='accordion'>\n"
 								+ "</div>\n"
 								+ "</div>\n");
