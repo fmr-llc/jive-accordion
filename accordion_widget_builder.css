@@ -34,7 +34,7 @@ expand and contract the panels to show and hide the contained information.
 	width: 90%;
 } 
 
-#mainContainer {
+#AccordionBuilderContainer {
 	border-width: 2px;
 	border-style: solid;
 	border-color: rgb(187, 187, 187) rgb(187, 187, 187) rgb(218, 218, 218);
