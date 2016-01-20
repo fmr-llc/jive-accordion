@@ -61,7 +61,7 @@ function init(){
 			var collapseIncrementer = 1;
 
 			// Loop over the remaining rows and place them in the accordion.
-			for (var i = 0; i < rows.length; i++) {
+			for (var i = 0; i < rows.length - 1; i++) {
 				//Grabs the content in the table row.
 				titleHtml = $j('tbody:first > tr:eq('+i+') td:eq(0)', table).html();
 				bodyHtml = $j('tbody:first > tr:eq('+i+') td:eq(1)', table).html();
