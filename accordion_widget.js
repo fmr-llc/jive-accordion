@@ -31,7 +31,7 @@ function log(msg){
 	console.log(msg);
 }
 
-// Loads in the setup docuiment and parses the table information into the accordion.
+// Loads in the setup document and parses the table information into the accordion.
 function init(){
 	if(!sourceURL) {
 		log("No setup document given");
@@ -45,13 +45,14 @@ function init(){
 		dataType: 'html',
 		success: function (data) { 
 			// Point to the table in the setup document
-			var table = $j('#jive-body-main div.jive-rendered-content table', data);
+			var table = $j('#jive-body-main div.jive-rendered-content > table', data);
+
 			if(table.length < 1) {
 				log('No table found in the setup document.  Please make sure the setup document is correctly formatted.');
 				return false;
 			}
 			// Check to make sure there are at least two table rows
-			var rows = $j('tr', table);
+			var rows = $j('#jive-body-main div.jive-rendered-content > table > tbody > tr', data);
 			if(rows.length < 2) {
 				log('The table does not have at least 2 rows.  Please properly create the table in the setup document.');
 				return false;
@@ -61,7 +62,7 @@ function init(){
 			var collapseIncrementer = 1;
 
 			// Loop over the remaining rows and place them in the accordion.
-			for (var i = 0; i < rows.length - 1; i++) {
+			for (var i = 0; i < rows.length; i++) {
 				//Grabs the content in the table row.
 				titleHtml = $j('tbody:first > tr:eq('+i+') td:eq(0)', table).html();
 				bodyHtml = $j('tbody:first > tr:eq('+i+') td:eq(1)', table).html();
@@ -69,10 +70,10 @@ function init(){
 				tmpHTML += "<div class='panel " + colorStyle + "'> <h4 class='panel-heading panel-title' data-toggle='collapse' data-parent='#accordion' href='#collapse" + collapseIncrementer + "' onclick='resizeWidget()'> " + titleHtml + " </h4> <div id='collapse" + collapseIncrementer + "' class='panel-collapse collapse";
 				if (typeof initState !== 'undefined') {
 					if ( initState == 'Expanded' || ( i == 0 && ( initState == 'First' || initState == 'undefined' ) ) ) {
-						tmpHTML += "in ";
+						tmpHTML += " in";
 					}
 				} else if ( i == 0 ) {
-					tmpHTML += "in ";
+					tmpHTML += " in";
 				}
 				tmpHTML += " panel-body'> " + bodyHtml + " </div> </div>";
 
