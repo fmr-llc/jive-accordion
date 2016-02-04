@@ -48,13 +48,13 @@ function init(){
 			var table = $j('#jive-body-main div.jive-rendered-content > table', data);
 
 			if(table.length < 1) {
-				log('No table found in the setup document.  Please make sure the setup document is correctly formatted.');
+				alert('No table found in the setup document.  Please make sure the setup document is correctly formatted.');
 				return false;
 			}
 			// Check to make sure there are at least two table rows
 			var rows = $j('#jive-body-main div.jive-rendered-content > table > tbody > tr', data);
-			if(rows.length < 2) {
-				log('The table does not have at least 2 rows.  Please properly create the table in the setup document.');
+			if(rows.length < 1) {
+				alert('The table does not have at least 1 row.  Please properly create the table in the setup document.');
 				return false;
 			} 
 			// set variables for temporarily storing table data
@@ -90,7 +90,7 @@ function init(){
 			resizeWidget();
 		},
 		error: function (xhr, ajaxOptions, thrownError){ 
-			log("There was an error: Most likely reason is your sourceURL variable is not pointing to a valid document");
+			alert("There was an error: Most likely reason is your sourceURL variable is not pointing to a valid document");
 			return false;
 		},
 		complete: function(){
