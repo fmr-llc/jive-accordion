@@ -1,7 +1,7 @@
 /*
 Jive - Accordion Widget
 
-Copyright (c) 2015 Fidelity Investments
+Copyright (c) 2015-2016 Fidelity Investments
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -64,8 +64,8 @@ function init(){
 			// Loop over the remaining rows and place them in the accordion.
 			for (var i = 0; i < rows.length; i++) {
 				//Grabs the content in the table row.
-				titleHtml = $j('tbody:first > tr:eq('+i+') td:eq(0)', table).html();
-				bodyHtml = $j('tbody:first > tr:eq('+i+') td:eq(1)', table).html();
+				titleHtml = $j('td:eq(0)', rows[i]).html();
+				bodyHtml = $j('td:eq(1)', rows[i]).html();
 				
 				tmpHTML += "<div class='panel " + colorStyle + "'> <h4 class='panel-heading panel-title' data-toggle='collapse' data-parent='#accordion' href='#collapse" + collapseIncrementer + "' onclick='resizeWidget()'> " + titleHtml + " </h4> <div id='collapse" + collapseIncrementer + "' class='panel-collapse collapse";
 				if (typeof initState !== 'undefined') {
